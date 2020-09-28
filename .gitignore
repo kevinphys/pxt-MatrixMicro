@@ -10,6 +10,5 @@ _site
 .header.json
 .simstate.json
 Makefile
-projects
 _config.yml
 .vscode

@@ -18,7 +18,7 @@
         "_locales/zh-tw/matrix-strings.json"
     ],
     "testFiles": [
-        "test.ts"
+        "projects/test.ts"
     ],
     "public": true,
     "supportedTargets": [
