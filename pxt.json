@@ -1,0 +1,37 @@
+{
+    "name": "Matrix Micro",
+    "version": "1.0.1",
+    "description": "Matrix Microbit Extention",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "README.md",
+        "matrix.ts",
+        "matrix_modules/PCA9633.ts",
+        "matrix_modules/HC-SR04.ts",
+        "matrix_modules/ADS1015.ts",
+        "matrix_modules/WS2812B.ts",
+        "matrix_modules/SENDBUFF.asm",
+        "_locales/zh-tw/matrix-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj",
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
+        }
+    }
+}
