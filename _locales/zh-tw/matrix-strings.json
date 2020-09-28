@@ -1,0 +1,10 @@
+{
+  "Matrix|block": "Matrix Micro",
+  "Matrix.Maxrix_Motor|block": "Matrix 直流馬達 |%ch| 速度 |%sp|",
+  "Matrix.Matrix_Dread|block": "Matrix 數位插槽 |%pin|",
+  "Matrix.Matrix_ADC|block": "Matrix 類比插槽 |%ch|",
+  "Matrix.Matrix_Ultrasonic|block": "Matrix 超音波感測器 |%port|",
+  "Matrix.Matrix_RGB|block": "Matrix LED %led 紅 %r 綠 %g 藍 %b",
+  "Matrix.Matrix_Servo|block": "Matrix 伺服馬達 |%port|角度 |%angle|",
+  "Matrix.Matrix Servo Release|block":"Matrix 伺服馬達釋放"
+}
