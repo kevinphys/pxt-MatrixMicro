@@ -66,13 +66,13 @@ function RGBLED_Test () {
         `)
     for (let index = 0; index <= 255; index++) {
         Matrix.LED(
-        LED.LED1,
+        LED.RGB1,
         index,
         255 - index,
         0
         )
         Matrix.LED(
-        LED.LED2,
+        LED.RGB2,
         index,
         255 - index,
         0
@@ -81,13 +81,13 @@ function RGBLED_Test () {
     }
     for (let index = 0; index <= 255; index++) {
         Matrix.LED(
-        LED.LED1,
+        LED.RGB1,
         255 - index,
         0,
         index
         )
         Matrix.LED(
-        LED.LED2,
+        LED.RGB2,
         255 - index,
         0,
         index
@@ -96,13 +96,13 @@ function RGBLED_Test () {
     }
     for (let index = 0; index <= 255; index++) {
         Matrix.LED(
-        LED.LED1,
+        LED.RGB1,
         0,
         index,
         255 - index
         )
         Matrix.LED(
-        LED.LED2,
+        LED.RGB2,
         0,
         index,
         255 - index
@@ -163,13 +163,13 @@ basic.forever(function () {
         # # # # #
         `)
     Matrix.LED(
-    LED.LED1,
+    LED.RGB1,
     0,
     0,
     0
     )
     Matrix.LED(
-    LED.LED2,
+    LED.RGB2,
     0,
     0,
     0
