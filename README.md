@@ -19,5 +19,5 @@ This repository can be added as an **extension** in MakeCode.
 * for PXT/microbit
 
 ```package
-MatrixMicro-Beta=github:KK-MatrixRobotics/MatirxMicro
+MatrixMicro-Beta=github:KK-MatrixRobotics/MatxMicro
 ```
