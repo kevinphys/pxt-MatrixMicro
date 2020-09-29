@@ -10,6 +10,10 @@ This repository can be added as an **extension** in MakeCode.
 * click on **Extensions** under the gearwheel menu
 * search for **https://github.com/** and import
 
+## License
+
+MIT
+
 ## Blocks preview
 
 ![A rendered view of the blocks](https://github.com/KKITC-Roger/MatrixMicrobit-beta/icon.png)
