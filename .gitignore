@@ -1,6 +1,5 @@
 # MakeCode
 built
-node_modules
 yotta_modules
 yotta_targets
 pxt_modules
@@ -12,3 +11,4 @@ _site
 Makefile
 _config.yml
 .vscode
+main.blocks
