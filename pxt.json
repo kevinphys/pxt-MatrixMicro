@@ -15,7 +15,8 @@
         "matrix_modules/HC-SR04.ts",
         "matrix_modules/ADS1015.ts",
         "matrix_modules/WS2812B.ts",
-        "_locales/zh-tw/matrix-strings.json"
+        "_locales/zh-tw/Matrix Micro-jsdoc-strings.json",
+        "_locales/zh-tw/Matrix Micro-strings.json"
     ],
     "testFiles": [
         "test.ts"

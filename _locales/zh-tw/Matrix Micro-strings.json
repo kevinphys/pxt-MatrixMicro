@@ -1,0 +1,21 @@
+{
+  "ADS1015|block": "ADS1015",
+  "Matrix.ADC|block": "類比插槽 |%ch|",
+  "Matrix.LED|block": "Matrix LED%led 紅%r 綠%g 藍%b",
+  "Matrix.Ultrasonic|block": "超音波感測器 |%port|",
+  "Matrix.dread|block": "數位插槽 |%pin|",
+  "Matrix.motor|block": "直流馬達 |%ch| 速度 |%sp|",
+  "Matrix.servo_release|block": "伺服馬達釋放",
+  "Matrix.servo|block": "伺服馬達 |%port| 角度 |%angle|",
+  "Matrix|block": "Matrix",
+  "RGB_MODE.RGBW|block": "RGB+W",
+  "RGB_MODE.RGB_RGB|block": "RGB (RGB format)",
+  "RGB_MODE.RGB|block": "RGB (GRB format)",
+  "SR04|block": "SR04",
+  "WS2812B|block": "WS2812B",
+  "{id:category}ADS1015": "ADS1015",
+  "{id:category}Matrix": "Matrix",
+  "{id:category}PCA9633": "PCA9633",
+  "{id:category}SR04": "SR04",
+  "{id:category}WS2812B": "WS2812B"
+}

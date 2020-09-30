@@ -113,25 +113,6 @@ namespace Matrix{
         }
     }
 
-    // /**
-    //  *Set Motor wait until "motor_go" blocks
-    // */
-    // //%block="Motor Wait"
-    // //%weight=90 %blockID="Matrix_motor_wait"
-    // export function motor_wait(): void{
-
-    //     dcmotor.wait()
-    // }
-
-    // /**
-    //  *let Motor engage
-    // */
-    // //%block="Motor Go"
-    // //%weight=90 %blockID="Matrix_motor_go"
-    // export function motor_go(): void{
-
-    //     dcmotor.go()
-    // }
 
     /**
      *Set RC Servo Angle
