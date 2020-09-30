@@ -1,6 +1,6 @@
 {
     "name": "Matrix Micro",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Matrix Microbit Extention",
     "license": "MIT",
     "dependencies": {
