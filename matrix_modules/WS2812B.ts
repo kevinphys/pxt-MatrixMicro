@@ -128,9 +128,5 @@ namespace WS2812B {
         let b = (rgb) & 0xFF;
         return b;
     }
-
-    //% shim=SENDBUFFAsm
-    function SENDBUFF(buf: Buffer, pin: DigitalPin) {
-    }
     
 }

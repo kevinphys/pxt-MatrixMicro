@@ -28,22 +28,23 @@ namespace Matrix{
         pins.setPull(DigitalPin.P11, PinPullMode.PullUp)
 
         pins.setPull(DigitalPin.P12, PinPullMode.PullUp)
-        pins.setPull(DigitalPin.P14, PinPullMode.PullUp)
-
-        PCA9633.setPWM(0, 0)
-        PCA9633.setPWM(1, 0)
-        PCA9633.setPWM(2, 0)
-        PCA9633.setPWM(3, 0)
+        pins.setPull(DigitalPin.P14, PinPullMode.PullUp)   
 
         pins.digitalWritePin(DigitalPin.P16, 0)
         pins.analogWritePin(AnalogPin.P0, 0)
-
         
+        dcmotor.setPWM(0, 0)
+        dcmotor.setPWM(1, 0)
+        dcmotor.setPWM(2, 0)
+        dcmotor.setPWM(3, 0)
+
         defl.setPixelColor(0, 0x000000)
         defl.setPixelColor(1, 0x000000)
         defl.show()
     }
+
     let defl = WS2812B.create(DigitalPin.P8, 2, RGB_MODE.RGB)
+    let dcmotor = PCA9633.init()
     Init()
 
     /**
@@ -91,26 +92,46 @@ namespace Matrix{
 
         if (ch) {
             if (sp > 0) {
-                PCA9633.setPWM(3, 0)
-                PCA9633.setPWM(2, pwm)
+                dcmotor.setPWM(3, 0)
+                dcmotor.setPWM(2, pwm)
             }
             else {
-                PCA9633.setPWM(2, 0)
-                PCA9633.setPWM(3, pwm)
+                dcmotor.setPWM(2, 0)
+                dcmotor.setPWM(3, pwm)
             } 
         }
         else {
             if (sp > 0) {
-                PCA9633.setPWM(1, 0)
-                PCA9633.setPWM(0, pwm)
+                dcmotor.setPWM(1, 0)
+                dcmotor.setPWM(0, pwm)
             }
             else {
-                PCA9633.setPWM(0, 0)
-                PCA9633.setPWM(1, pwm)
+                dcmotor.setPWM(0, 0)
+                dcmotor.setPWM(1, pwm)
             }
 
         }
     }
+
+    // /**
+    //  *Set Motor wait until "motor_go" blocks
+    // */
+    // //%block="Motor Wait"
+    // //%weight=90 %blockID="Matrix_motor_wait"
+    // export function motor_wait(): void{
+
+    //     dcmotor.wait()
+    // }
+
+    // /**
+    //  *let Motor engage
+    // */
+    // //%block="Motor Go"
+    // //%weight=90 %blockID="Matrix_motor_go"
+    // export function motor_go(): void{
+
+    //     dcmotor.go()
+    // }
 
     /**
      *Set RC Servo Angle
@@ -202,7 +223,7 @@ namespace Matrix{
         
         defl.setPixelColor(led, rgb)
         defl.show()
-        
+
         control.waitMicros(500)
     }
 }

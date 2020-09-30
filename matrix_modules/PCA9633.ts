@@ -13,7 +13,62 @@ namespace PCA9633{
     const PCA9633_LEDOUT = 0x08
 
 
-    let initialized = false
+    export class MotorPWM {
+
+        pending: boolean;
+        duty0: number; // pwm duty1 of motor
+        duty1: number; // pwm duty2 of motor
+        duty2: number; // pwm duty3 of motor
+        duty3: number; // pwm duty4 of motor    
+
+        
+        /**
+         *Set PWM to PCA9633
+        * @param channel [0-3] choose PWM channel; eg: 0, 1
+        * @param duty [0-255] pulse of servo; eg: 1, 2, 4
+        */
+        setPWM(channel: number, duty: number): void {
+
+            switch (channel) {
+                case 0:
+                    this.duty0 = duty;
+                    break;
+                case 1:
+                    this.duty1 = duty;
+                    break;
+                case 2:
+                    this.duty2 = duty;
+                    break;
+                case 3:
+                    this.duty3 = duty;
+                    break;
+            }
+
+            if (this.pending){
+                
+            }
+            
+            else {
+                this.go();
+            }
+            
+        }
+
+        wait(): void{
+
+            this.pending = true;
+        }
+
+        go(): void {
+
+            i2cwrite(PCA9633_ADDRESS, PCA9633_LED0, this.duty0);
+            i2cwrite(PCA9633_ADDRESS, PCA9633_LED1, this.duty1);
+            i2cwrite(PCA9633_ADDRESS, PCA9633_LED2, this.duty2);
+            i2cwrite(PCA9633_ADDRESS, PCA9633_LED3, this.duty3);
+
+            this.pending = false;
+        }
+    }
 
     function i2cwrite(addr: number, reg: number, value: number): void {
         let buf = pins.createBuffer(2);
@@ -22,7 +77,7 @@ namespace PCA9633{
         pins.i2cWriteBuffer(addr, buf);
     }   
 
-    function initPCA9633(): void {
+    export function init(): MotorPWM {
 
         //Turn On All LED Output
         i2cwrite(PCA9633_ADDRESS, PCA9633_MODE1, 0x80);
@@ -33,33 +88,14 @@ namespace PCA9633{
         //Set Output in Individual Mode 
         i2cwrite(PCA9633_ADDRESS, PCA9633_LEDOUT, 0xAA);
 
-        initialized = true;
-    }
+        let motorpwm = new MotorPWM;
 
-	/**
-	 *Set PWM to PCA9633
-	 * @param channel [0-3] choose PWM channel; eg: 0, 1
-     * @param duty [0-255] pulse of servo; eg: 1, 2, 4
-	*/
-    export function setPWM(channel: number, duty: number): void {
+        motorpwm.duty0 = 0;
+        motorpwm.duty1 = 0;
+        motorpwm.duty2 = 0;
+        motorpwm.duty3 = 0;
+        motorpwm.pending = false;
 
-        if (!initialized) {
-            initPCA9633();
-        }
-
-        switch (channel) {
-            case 0:
-                i2cwrite(PCA9633_ADDRESS, PCA9633_LED0, duty);
-                break;
-            case 1:
-                i2cwrite(PCA9633_ADDRESS, PCA9633_LED1, duty);
-                break;
-            case 2:
-                i2cwrite(PCA9633_ADDRESS, PCA9633_LED2, duty);
-                break;
-            case 3:
-                i2cwrite(PCA9633_ADDRESS, PCA9633_LED3, duty);
-                break;
-        }
+        return motorpwm;
     }
 }
