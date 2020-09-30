@@ -142,7 +142,7 @@ namespace Matrix{
         pins.digitalWritePin(DigitalPin.P2, 0)
         pins.digitalWritePin(DigitalPin.P13, 0)
 
-        control.waitMicros(50000)
+        control.waitMicros(500000)
 
     }
 
@@ -202,6 +202,7 @@ namespace Matrix{
         
         defl.setPixelColor(led, rgb)
         defl.show()
-
+        
+        control.waitMicros(500)
     }
 }
