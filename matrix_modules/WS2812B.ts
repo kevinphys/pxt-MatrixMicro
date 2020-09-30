@@ -43,8 +43,7 @@ namespace WS2812B {
         show() {
             // only supported in beta
             // ws2812b.setBufferMode(this.pin, this._mode);
-            SENDBUFF(this.buf, this.pin);
-            control.waitMicros(500);
+            ws2812b.sendBuffer(this.buf, this.pin);
         }
 
         /**

@@ -12,3 +12,4 @@ Makefile
 _config.yml
 .vscode
 main.blocks
+node_modules

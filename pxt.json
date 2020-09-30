@@ -15,11 +15,10 @@
         "matrix_modules/HC-SR04.ts",
         "matrix_modules/ADS1015.ts",
         "matrix_modules/WS2812B.ts",
-        "matrix_modules/SENDBUFF.asm",
         "_locales/zh-tw/matrix-strings.json"
     ],
     "testFiles": [
-        "projects/test.ts"
+        "test.ts"
     ],
     "public": true,
     "supportedTargets": [
