@@ -16,7 +16,7 @@ MIT
 
 ## Blocks preview
 
-![A rendered view of the blocks](https://github.com/KKITC-Roger/MatrixMicrobit-beta/icon.png)
+![A rendered view of the blocks](https://github.com/KK-MatrixRobotics/MatrixMicro/icon.png)
 
 ## Supported targets
 
