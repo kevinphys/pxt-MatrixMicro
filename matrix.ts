@@ -25,10 +25,10 @@ enum Animal{
 
 //% weight=2 color=#FFBA84 icon="\uf8de" block="Hakuna"
 namespace Hakuna{
-	function Init():void{
+    function Init():void{
 	//Do nothing
 	}
-	Init()
+    Init()
 
 	/**
 	*It's problem free
@@ -36,7 +36,7 @@ namespace Hakuna{
 	//%block="What a wonderful phrase"
 	//%weight=99 %blockID="Problem_free"
 	//% sp.min=-100 sp.max=100
-	export function phrase(): void{
+    export function phrase(): void{
 	}
 
 
