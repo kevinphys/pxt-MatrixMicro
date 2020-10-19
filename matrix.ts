@@ -18,6 +18,32 @@ enum LED{
     RGB1 = 0,
     RGB2 = 1
 }
+enum Animal{
+    Timon = 0,
+    Pumbaa = 1
+}
+
+//% weight=2 color=# icon="\uf8de" block="Hakuna"
+namespace Hakuna{
+	function Init():void{
+	//Do nothing
+	}
+	Init()
+
+	/**
+	*It's problem free
+	*@param ch [0-1] choose Timon or Pumbaa; eg: 0, 1
+	*@param sp [-100-100] set motor speed; eg: 0, -90
+	*/
+	//%block="What a wonderful phrase |%ch| at speed |%sp|"
+	//%weight=99 %blockID="Problem_free"
+	//% sp.min=-100 sp.max=100
+	export function motor(ch: Animal, sp: number): void{
+	}
+
+
+}
+
 
 //% weight=0 color=#0066CC icon="\uf2db" block="Matrix"
 namespace Matrix{
