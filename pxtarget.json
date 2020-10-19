@@ -1,0 +1,38 @@
+{
+    "name": "Matrix Micro",
+    "version": "1.0.6",
+    "description": "Matrix Microbit Extention",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "ws2812b": "github:microsoft/pxt-ws2812b#v0.1.1"
+    },
+    "files": [
+        "README.md",
+        "matrix.ts",
+        "matrix_modules/PCA9633.ts",
+        "matrix_modules/HC-SR04.ts",
+        "matrix_modules/ADS1015.ts",
+        "matrix_modules/WS2812B.ts",
+        "_locales/zh-tw/Matrix Micro-jsdoc-strings.json",
+        "_locales/zh-tw/Matrix Micro-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj",
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
+        }
+    }
+}

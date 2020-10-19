@@ -32,13 +32,11 @@ namespace Hakuna{
 
 	/**
 	*It's problem free
-	*@param ch [0-1] choose Timon or Pumbaa; eg: 0, 1
-	*@param sp [-100-100] set motor speed; eg: 0, -90
 	*/
-	//%block="What a wonderful phrase |%ch| at speed |%sp|"
+	//%block="What a wonderful phrase"
 	//%weight=99 %blockID="Problem_free"
 	//% sp.min=-100 sp.max=100
-	export function phrase(ch: Animal, sp: number): void{
+	export function phrase(): void{
 	}
 
 
