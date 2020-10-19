@@ -23,7 +23,7 @@ enum Animal{
     Pumbaa = 1
 }
 
-//% weight=2 color=# icon="\uf8de" block="Hakuna"
+//% weight=2 color=#FFBA84 icon="\uf8de" block="Hakuna"
 namespace Hakuna{
 	function Init():void{
 	//Do nothing
@@ -38,7 +38,7 @@ namespace Hakuna{
 	//%block="What a wonderful phrase |%ch| at speed |%sp|"
 	//%weight=99 %blockID="Problem_free"
 	//% sp.min=-100 sp.max=100
-	export function motor(ch: Animal, sp: number): void{
+	export function phrase(ch: Animal, sp: number): void{
 	}
 
 
