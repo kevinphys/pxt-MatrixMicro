@@ -23,24 +23,6 @@ enum Animal{
     Pumbaa = 1
 }
 
-//% weight=2 color=#FFBA84 icon="\uf8de" block="Hakuna"
-namespace Hakuna{
-    function Init():void{
-	//Do nothing
-	}
-    Init()
-
-	/**
-	*It's problem free
-	*/
-	//%block="What a wonderful phrase"
-	//%weight=99 %blockID="Problem_free"
-	//% sp.min=-100 sp.max=100
-    export function phrase(): void{
-	}
-
-
-}
 
 
 //% weight=0 color=#0066CC icon="\uf2db" block="Matrix"
@@ -231,4 +213,24 @@ namespace Matrix{
 
         control.waitMicros(500)
     }
+}
+
+
+//% weight=2 color=#FFBA84 icon="\uf8de" block="Hakuna"
+namespace Hakuna{
+    function Init():void{
+	//Do nothing
+	}
+    Init()
+
+	/**
+	*It's problem free
+	*/
+	//%block="What a wonderful phrase"
+	//%weight=99 %blockID="Problem_free"
+	//% sp.min=-100 sp.max=100
+    export function phrase(): void{
+	}
+
+
 }
