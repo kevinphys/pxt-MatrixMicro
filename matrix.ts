@@ -219,18 +219,18 @@ namespace Matrix{
 //% weight=2 color=#FFBA84 icon="\uf8de" block="Hakuna"
 namespace Hakuna{
     function Init():void{
-	//Do nothing
-	}
+    //Do nothing
+    }
     Init()
 
-	/**
-	*It's problem free
-	*/
-	//%block="What a wonderful phrase"
-	//%weight=99 %blockID="Problem_free"
-	//% sp.min=-100 sp.max=100
+    /**
+    *It's problem free
+    */
+    //%block="What a wonderful phrase"
+    //%weight=99 %blockID="Problem_free"
+    //% sp.min=-100 sp.max=100
     export function phrase(): void{
-	}
+    }
 
 
 }
